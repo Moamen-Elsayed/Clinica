@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="528.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clinic.PatientController">
+   <children>
+      <Label layoutX="368.0" layoutY="26.0" text="أضافة موعد جديد">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="479.0" layoutY="121.0" text="اسم المريض:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Patient_Name" layoutX="124.0" layoutY="119.0" prefHeight="25.0" prefWidth="344.0" />
+      <Label layoutX="479.0" layoutY="170.0" text="العمر:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Patient_Age" alignment="CENTER_RIGHT" layoutX="398.0" layoutY="167.0" prefHeight="25.0" prefWidth="70.0" />
+      <Label layoutX="480.0" layoutY="212.0" text="النوع:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="Male" contentDisplay="RIGHT" layoutX="429.0" layoutY="214.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="ذكر">
+         <toggleGroup>
+            <ToggleGroup fx:id="Gender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="Female" layoutX="339.0" layoutY="214.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="انثي" toggleGroup="$Gender" />
+      <Label layoutX="480.0" layoutY="252.0" text="المنطقة:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Patient_District" layoutX="297.0" layoutY="250.0" prefHeight="25.0" prefWidth="171.0" />
+      <Label layoutX="478.0" layoutY="293.0" text="تليفون 1: " />
+      <TextField fx:id="Phone1" layoutX="297.0" layoutY="289.0" prefHeight="25.0" prefWidth="171.0" />
+      <Label layoutX="192.0" layoutY="293.0" text="تليفون 2: " />
+      <TextField fx:id="Phone2" layoutX="14.0" layoutY="289.0" prefHeight="25.0" prefWidth="171.0" />
+      <Label layoutX="478.0" layoutY="333.0" text="ملاحظات:" />
+      <TextArea fx:id="Notes" layoutX="155.0" layoutY="333.0" prefHeight="126.0" prefWidth="313.0" />
+      <Button fx:id="Done" layoutX="152.0" layoutY="477.0" mnemonicParsing="false" onAction="#onDone" prefHeight="25.0" prefWidth="375.0" text="موافق">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="Cancel" layoutX="35.0" layoutY="477.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="25.0" prefWidth="106.0" text="إلغاء الامر">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="372.0" layoutY="171.0" text="سنة">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView layoutX="541.0" layoutY="26.0">
+         <image>
+            <Image url="@medical.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="481.0" layoutY="82.0" text="نوع الزيارة:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="VType" layoutX="321.0" layoutY="80.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

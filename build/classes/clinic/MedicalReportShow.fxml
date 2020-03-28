@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="481.0" prefWidth="542.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clinic.MedicalReportShowController">
+   <children>
+      <Label layoutX="423.0" layoutY="34.0" text="اسم المريض:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="Pname" layoutX="154.0" layoutY="34.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="258.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TableView fx:id="ReportsTable" layoutY="74.0" prefHeight="404.0" prefWidth="542.0">
+        <columns>
+          <TableColumn fx:id="ReportsCol" prefWidth="541.0" text="التقارير" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

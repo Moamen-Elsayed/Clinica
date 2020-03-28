@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="204.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clinic.ChangeUsernameController">
+   <children>
+      <Label layoutX="292.0" layoutY="63.0" text="اسم المستخدم الحالي:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="ok" layoutX="192.0" layoutY="160.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="217.0" text="تأكيد">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancel" layoutX="63.0" layoutY="160.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="إلغاء">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="434.0" layoutY="14.0" text="تغيير اسم المستخدم ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0a0a0a" height="41.0" layoutX="425.0" layoutY="7.0" opacity="0.09" strokeType="INSIDE" width="172.0" />
+      <Label layoutX="293.0" layoutY="105.0" text="اسم المستخدم الجديد:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="CurrentUserN" layoutX="63.0" layoutY="63.0" prefHeight="23.0" prefWidth="217.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="NewUserN" layoutX="63.0" layoutY="105.0" prefHeight="23.0" prefWidth="217.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <Label fx:id="wrong" layoutX="158.0" layoutY="128.0" text="اعد كتابة اسم المستخدم" textFill="RED" visible="false" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="240.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clinic.LogInController">
+   <children>
+      <Label layoutX="272.0" layoutY="35.0" text="اسم المستخدم:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="272.0" layoutY="87.0" text="كلمة المرور:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="UserName" layoutX="57.0" layoutY="36.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="200.0" />
+      <PasswordField fx:id="Password" layoutX="57.0" layoutY="88.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="200.0" />
+      <Button fx:id="ok" layoutX="170.0" layoutY="142.0" mnemonicParsing="false" onAction="#Ok" prefHeight="25.0" prefWidth="172.0" text="موافق">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="close" layoutX="57.0" layoutY="142.0" mnemonicParsing="false" onAction="#Close" prefHeight="25.0" prefWidth="95.0" text="إغلاق">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="CreateNewAcc" layoutX="55.0" layoutY="184.0" mnemonicParsing="false" onAction="#Create" prefHeight="43.0" prefWidth="287.0" text="إنشاء حساب جديد">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

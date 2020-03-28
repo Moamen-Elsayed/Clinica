@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="361.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clinic.AnotherAppoimentController">
+   <children>
+      <TableView fx:id="AppoimentTable" nodeOrientation="RIGHT_TO_LEFT" prefHeight="323.0" prefWidth="695.0">
+        <columns>
+          <TableColumn prefWidth="381.0" text="الاسم" />
+          <TableColumn minWidth="0.0" prefWidth="124.0" text="نوع الزيارة" />
+            <TableColumn prefWidth="189.0" text="تاريخ الزيارة" />
+        </columns>
+      </TableView>
+      <Button fx:id="GoToPatientInfo" layoutX="313.0" layoutY="323.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="226.0" text="الذهاب الي بيانات المريض">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="exit" layoutX="156.0" layoutY="323.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="143.0" text="إلغاء الامر">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

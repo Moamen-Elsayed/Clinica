@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="528.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clinic.PatientViewDataController">
+   <children>
+      <Label layoutX="358.0" layoutY="34.0" prefHeight="33.0" prefWidth="150.0" text="بيانات المريض">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="483.0" layoutY="82.0" text="اسم المريض:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="483.0" layoutY="131.0" text="العمر:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="484.0" layoutY="173.0" text="النوع:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="484.0" layoutY="213.0" text="المنطقة:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="482.0" layoutY="254.0" text="تليفون 1: " />
+      <Label layoutX="196.0" layoutY="254.0" text="تليفون 2: " />
+      <Label layoutX="482.0" layoutY="294.0" text="ملاحظات:" />
+      <Button fx:id="close" layoutX="39.0" layoutY="438.0" mnemonicParsing="false" onAction="#onClose" prefHeight="25.0" prefWidth="106.0" text="إلغاء ">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="376.0" layoutY="132.0" text="سنة">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="PName" layoutX="311.0" layoutY="82.0" prefHeight="20.0" prefWidth="158.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="PAge" layoutX="410.0" layoutY="132.0" prefHeight="20.0" prefWidth="62.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="PGender" layoutX="372.0" layoutY="173.0" prefHeight="20.0" prefWidth="90.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="PDistrict" layoutX="318.0" layoutY="215.0" prefHeight="20.0" prefWidth="144.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="PPhone1" layoutX="328.0" layoutY="253.0" prefHeight="20.0" prefWidth="144.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="PPhone2" layoutX="39.0" layoutY="253.0" prefHeight="20.0" prefWidth="144.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="Note" layoutX="171.0" layoutY="311.0" prefHeight="100.0" prefWidth="289.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

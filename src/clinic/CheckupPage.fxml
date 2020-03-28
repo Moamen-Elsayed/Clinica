@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="699.0" prefWidth="1365.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clinic.CheckupPageController">
+   <children>
+      <VBox layoutY="1.0" prefHeight="27.0" prefWidth="950.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+         <children>
+            <MenuBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="0.0" prefWidth="950.0">
+               <menus>
+                  <Menu mnemonicParsing="false" text="ملف">
+                     <items>
+                        <MenuItem fx:id="Info" mnemonicParsing="false" onAction="#info" text="بيانات المرضي" />
+                        <MenuItem fx:id="logout" mnemonicParsing="false" onAction="#LogOut" text="تسجيل خروج" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="تسجيل">
+                     <items>
+                        <MenuItem fx:id="sdad" mnemonicParsing="false" onAction="#Pay" text="سداد" />
+                        <MenuItem fx:id="Wsol" mnemonicParsing="false" onAction="#Arrival" text="وصول" />
+                        <MenuItem fx:id="Enha2" mnemonicParsing="false" onAction="#Finish" text="انهاء زيارة" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="تقارير">
+                     <items>
+                        <MenuItem fx:id="dailyrevenue" mnemonicParsing="false" onAction="#DailyRevenue" text="تقرير تفصيلي بحركة الخزينة اليوم" />
+                        <MenuItem fx:id="longtermrevenue" mnemonicParsing="false" onAction="#LongTermRevenue" text="تقرير تفصيلي بحركة الخزينة عن فترة" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="اضافات">
+                     <items>
+                        <MenuItem fx:id="medicine" mnemonicParsing="false" onAction="#Medicine" text="دواء" />
+                        <MenuItem fx:id="test" mnemonicParsing="false" onAction="#Test" text="تحليل" />
+                        <MenuItem fx:id="report" mnemonicParsing="false" onAction="#Report" text="تقرير طبي" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="اعدادات">
+                     <items>
+                        <MenuItem fx:id="passwordchande" mnemonicParsing="false" onAction="#PasswordChange" text="تغيير كلمة المرور" />
+                        <MenuItem fx:id="changeusername" mnemonicParsing="false" onAction="#ChangeUserName" text="تغيير اسم المستخدم" />
+                        <MenuItem fx:id="changereveal" mnemonicParsing="false" onAction="#ChangeReveal" text="تغير قيمة الكشف" />
+                        <MenuItem fx:id="changecon" mnemonicParsing="false" onAction="#ChangeCon" text="تغير قيمة الاستشارة" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+         </children>
+      </VBox>
+      <VBox layoutX="1109.0" layoutY="28.0" prefHeight="27.0" prefWidth="254.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="28.0" />
+      <VBox layoutX="1148.0" layoutY="88.0" prefHeight="52.0" prefWidth="177.0" AnchorPane.rightAnchor="40.0">
+         <children>
+            <Button fx:id="bookanotherday" mnemonicParsing="false" onAction="#BookAnotherDay" prefHeight="49.0" prefWidth="179.0" text="حجز في موعد قادم">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="WReport" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#WriteReport" prefHeight="54.0" prefWidth="249.0" text="كتابة تقرير ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="3.0" />
+         </padding>
+      </VBox>
+      <VBox layoutX="9.0" layoutY="191.0" prefHeight="469.0" prefWidth="1133.0" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="185.0">
+         <children>
+            <TableView fx:id="checkupTable" nodeOrientation="RIGHT_TO_LEFT" prefHeight="471.0" prefWidth="1133.0">
+               <columns>
+                  <TableColumn fx:id="nameCol" prefWidth="731.0" text="اسم المريض" />
+                  <TableColumn fx:id="typeCol" minWidth="0.0" prefWidth="180.0" text="نوع الزيارة" />
+                  <TableColumn fx:id="checkupDateCol" prefWidth="188.0" text="توقيت الوصول" />
+                  <TableColumn fx:id="endDateCol" prefWidth="188.0" text="توقيت الانتهاء" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="9.0" layoutY="666.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="42.0" prefWidth="1133.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="656.0">
+         <children>
+            <Button fx:id="cancellation" mnemonicParsing="false" onAction="#Cancellation" prefHeight="47.0" prefWidth="181.0" text="إلغاء الزيارة">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="latestreport" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#LatestReport" prefHeight="47.0" prefWidth="181.0" text="عرض احدث تقرير">
+               <HBox.margin>
+                  <Insets left="6.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="refund" layoutX="191.0" layoutY="10.0" mnemonicParsing="false" onAction="#Refund" prefHeight="47.0" prefWidth="181.0" text="عكس حركة السداد">
+               <HBox.margin>
+                  <Insets left="6.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="refersh" mnemonicParsing="false" onAction="#onRefresh" prefHeight="47.0" prefWidth="181.0" text="تحديث الجدول">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <VBox layoutX="160.0" layoutY="23.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="64.0" prefWidth="582.0" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="388.0">
+         <children>
+            <Label nodeOrientation="RIGHT_TO_LEFT" text="اسم المريض:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="2.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="Patient_Name" prefHeight="30.0" prefWidth="489.0">
+               <VBox.margin>
+                  <Insets top="3.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </VBox>
+      <VBox layoutX="987.0" layoutY="28.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="152.0" prefWidth="113.0" AnchorPane.rightAnchor="265.0">
+         <children>
+            <Button fx:id="pay" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#Pay" prefHeight="156.0" prefWidth="113.0" text="تسجيل سداد" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets top="4.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="2.0" top="-2.0" />
+         </padding>
+      </VBox>
+      <Line endX="-6.0" endY="33.0" layoutX="984.0" layoutY="146.0" startX="-6.0" startY="-117.0" stroke="#b2b2b2" AnchorPane.rightAnchor="382.5">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ababab" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Line>
+      <Line endX="-6.0" endY="33.0" layoutX="1113.0" layoutY="146.0" startX="-6.0" startY="-117.0" stroke="#b2b2b2" AnchorPane.rightAnchor="260.0" />
+      <HBox layoutX="160.0" layoutY="88.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="87.0" prefWidth="817.0" AnchorPane.topAnchor="92.0">
+         <children>
+            <Button fx:id="arrival" mnemonicParsing="false" onAction="#Arrival" prefHeight="87.0" prefWidth="643.0" text="تسجيل وصول">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="finish" mnemonicParsing="false" onAction="#Finish" prefHeight="87.0" prefWidth="181.0" text="إنهاء زيارة">
+               <HBox.margin>
+                  <Insets left="2.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <VBox layoutX="14.0" layoutY="68.0" prefHeight="124.0" prefWidth="146.0" AnchorPane.bottomAnchor="517.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="1215.0" AnchorPane.topAnchor="58.0">
+         <children>
+            <Button fx:id="search" mnemonicParsing="false" onAction="#Search" prefHeight="29.0" prefWidth="146.0" text="بحث">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="1.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="anotherdate" layoutX="10.0" layoutY="11.0" mnemonicParsing="false" onAction="#AnotherDate" prefHeight="29.0" prefWidth="146.0" text="مواعيد اخري">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="3.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="exit" layoutX="10.0" layoutY="44.0" mnemonicParsing="false" onAction="#Exit" prefHeight="55.0" prefWidth="146.0" text="خروج">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="3.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <DatePicker fx:id="datePicker" editable="false" layoutX="1123.0" layoutY="46.0" prefHeight="25.0" prefWidth="249.0" />
+   </children>
+</AnchorPane>

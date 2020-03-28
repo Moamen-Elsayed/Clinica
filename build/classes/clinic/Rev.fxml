@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="251.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="clinic.RevController">
+   <children>
+      <Label layoutX="438.0" layoutY="17.0" text="تغيير قيمة الكشف">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="404.0" layoutY="80.0" text="القيمة الحالية:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="CurrentVal" layoutX="363.0" layoutY="80.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="404.0" layoutY="132.0" text="القيمة الجديدة:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="NewVal" layoutX="284.0" layoutY="133.0" prefHeight="25.0" prefWidth="109.0" />
+      <Button fx:id="Ok" layoutX="243.0" layoutY="190.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="239.0" text="تأكيد الامر">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="Cancel" layoutX="119.0" layoutY="190.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="109.0" text="إلغاء الامر">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

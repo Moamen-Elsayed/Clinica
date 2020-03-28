@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="573.0" prefWidth="737.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clinic.DailyReportController">
+   <children>
+      <Label layoutX="303.0" layoutY="14.0" text="تقرير مفصل عن حركة الخزينة ليوم:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="TodayDate" layoutX="177.0" layoutY="14.0" nodeOrientation="RIGHT_TO_LEFT" textFill="#2902f5">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TableView fx:id="DailyReportTable" layoutY="55.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="433.0" prefWidth="737.0">
+        <columns>
+          <TableColumn fx:id="Pname" prefWidth="447.0" text="اسم المريض" />
+          <TableColumn fx:id="Vtype" prefWidth="148.0" text="نوع الزيارة" />
+            <TableColumn fx:id="Vcost" prefWidth="141.0" text="قيمة الزيارة" />
+        </columns>
+      </TableView>
+      <Label layoutX="343.0" layoutY="512.0" text="إجمالي محصلة اليوم:">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="DailyTotal" layoutX="270.0" layoutY="511.0" textFill="#0000f4">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
